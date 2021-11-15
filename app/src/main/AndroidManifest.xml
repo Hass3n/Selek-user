@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="minya.salek.salekapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/logosalak"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_api" />
+        <activity
+            android:name=".Apiplaces.MapActivity"
+            android:label="Map"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+
+        <activity android:name=".ForgetPasswordActivity"
+            android:parentActivityName=".LoginActivity"
+            />
+        <activity
+            android:name=".Captain.CaptainOldTripActivity"
+            android:parentActivityName=".Captain.CaptainProfileActivity" />
+        <activity android:name=".Captain.CaptainProfileActivity" />
+        <activity
+            android:name=".UserOldTripActivity"
+            android:parentActivityName=".UserProfileActivity" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:parentActivityName=".RegistrationActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:parentActivityName=".LoginActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Apiplaces.PermissionsActivity"
+            android:theme="@style/Theme.Design.NoActionBar"
+
+            ></activity>
+    </application>
+
+</manifest>

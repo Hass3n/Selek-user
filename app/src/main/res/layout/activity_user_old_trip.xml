@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/profile_mask"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:src="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/profile_title"
+        android:layout_width="100dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/hacen_tunisia"
+
+        android:text="SALEK"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/old_profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="78dp"
+        android:src="@drawable/mask_group"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="3dp" />
+
+    <TextView
+        android:id="@+id/old_user_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/old_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="خالد محمود رجب"
+        android:fontFamily="@font/hacen_tunisia"
+
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/old_trip_user_Phone_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/old_user_name_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="+2 0123414977"
+        android:textColor="@color/grayDark"
+        android:fontFamily="@font/hacen_tunisia"
+
+        android:textDirection="ltr"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/user_old_trip_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="لم تقوم بأي رحلات حتي الآن..."
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+
+        />
+    <ProgressBar
+        android:id="@+id/user_old_trip_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        />
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/order_trip"
+         android:text="الطالبات : "
+         android:fontFamily="@font/hacen_tunisia"
+         android:textSize="20sp"
+         android:layout_marginTop="5dp"
+         android:layout_below="@id/old_trip_user_Phone_txt"
+
+         />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:id="@+id/user_old_trip_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_trip"
+        tools:listitem="@layout/item_old_trip"
+        tools:itemCount="1"
+
+        />
+
+
+
+</RelativeLayout>
